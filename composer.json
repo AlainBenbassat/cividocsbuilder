@@ -1,0 +1,13 @@
+{
+  "name": "businessandcode/cividocsbuilder",
+  "description": "Builds the civi documentation",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "BuildCividocs\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.1"
+  }
+}
