@@ -3,7 +3,7 @@
 namespace BuildCividocs;
 
 class Cloner {
-  public static function clone($source): void {
+  public function clone($source): void {
     $output = null;
     $resultCode = null;
 

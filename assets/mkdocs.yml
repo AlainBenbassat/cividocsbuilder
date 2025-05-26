@@ -1,0 +1,14 @@
+site_name: CiviCRM Documentation
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+
+plugins:
+  - search
+  - tags
+  - categories
+
+# Don't make any changes below this line. nav will be generated here.
+
