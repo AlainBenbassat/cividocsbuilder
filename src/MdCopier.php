@@ -20,6 +20,7 @@ class MdCopier {
       mkdir($to, 0775, true);
     }
 
+    Logger::write("Copying $from to $to");
     exec("cp -r $from $to", $output, $resultCode);
 
     if ($resultCode !== 0) {
@@ -34,10 +35,26 @@ class MdCopier {
     $from = __DIR__ . "/../assets/about";
     $to = __DIR__ . "/../output/docs";
 
+    Logger::write("Copying $from to $to");
     exec("cp -r $from $to", $output, $resultCode);
 
     if ($resultCode !== 0) {
-      throw new \Exception("Copying $source to $destination failed");
+      throw new \Exception("Copying About folder failed");
+    }
+  }
+
+  public function copyIndex() {
+    $output = null;
+    $resultCode = null;
+
+    $from = __DIR__ . "/../assets/index.md";
+    $to = __DIR__ . "/../output/docs";
+
+    Logger::write("Copying $from to $to");
+    exec("cp $from $to", $output, $resultCode);
+
+    if ($resultCode !== 0) {
+      throw new \Exception("Copying index.md failed");
     }
   }
 }

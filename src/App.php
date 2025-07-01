@@ -11,9 +11,10 @@ class App {
   private const REPO_DEV_MANUAL = 'https://lab.civicrm.org/documentation/docs/dev.git';
 
   public function run() {
-    //$this->cloneRepos();
-    //$this->convertDocs();
+    $this->cloneRepos();
+    $this->convertDocs();
     $this->generateMkdocsFile();
+    $this->copyIndexFile();
   }
 
   private function cloneRepos() {
@@ -38,7 +39,14 @@ class App {
     $mdCopier->copyAbout();
   }
 
+  private function copyIndexFile() {
+    $mdCopier = new MdCopier();
+    $mdCopier->copyIndex();
+  }
+
   private function generateMkdocsFile() {
+    Logger::write("Combining mkdocs.yml from all books");
+
     $targetYml = Yaml::parseFile(__DIR__ . "/../assets/mkdocs.yml");
 
     $userYml = Yaml::parseFile(__DIR__ . "/../input/user-en/mkdocs.yml");

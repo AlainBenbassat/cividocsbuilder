@@ -1,6 +1,13 @@
 # cividocsbuilder
 
-Aggregates to CiviCRM document files from gitlab and generates a static site.
+cividocsbuilder builds an improved CiviCRM documentation site based on these books:
+
+* User Guide
+* Sysadmin Guide
+* Installation Guide
+* Developer Documentation
+
+See https://lab.civicrm.org/documentation/docs
 
 ## TEMP
 
