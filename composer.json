@@ -9,6 +9,6 @@
   },
   "require": {
     "php": ">=8.1",
-    "symfony/yaml": "^7.2"
+    "symfony/yaml": "^6.4"
   }
 }
