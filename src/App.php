@@ -15,6 +15,7 @@ class App {
     $this->convertDocs();
     $this->generateMkdocsFile();
     $this->copyIndexFile();
+    $this->buildStaticSite();
   }
 
   private function cloneRepos() {
@@ -83,6 +84,19 @@ class App {
     ];
 
     file_put_contents(__DIR__ . '/../output/mkdocs.yml', Yaml::dump($targetYml));
+  }
+
+  private function buildStaticSite() {
+    $output = null;
+    $resultCode = null;
+
+    Logger::write("Building the static site");
+    chdir(__DIR__ . '/../output');
+    exec("mkdocs build", $output, $resultCode);
+
+    if ($resultCode !== 0) {
+      throw new \Exception("Copying index.md failed");
+    }
   }
 
   private function addTargetGuideName(&$baseArr, $prefix): void {

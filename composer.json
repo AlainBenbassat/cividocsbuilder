@@ -1,6 +1,6 @@
 {
   "name": "businessandcode/cividocsbuilder",
-  "description": "Builds the civi documentation",
+  "description": "Builds the CiviCRM documentation website.",
   "type": "project",
   "autoload": {
     "psr-4": {
