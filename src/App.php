@@ -14,7 +14,7 @@ class App {
     $this->cloneRepos();
     $this->convertDocs();
     $this->generateMkdocsFile();
-    $this->copyIndexFile();
+    $this->copyIndexAndOtherFiles();
     $this->buildStaticSite();
   }
 
@@ -40,9 +40,10 @@ class App {
     $mdCopier->copyAbout();
   }
 
-  private function copyIndexFile() {
+  private function copyIndexAndOtherFiles() {
     $mdCopier = new MdCopier();
     $mdCopier->copyIndex();
+    $mdCopier->copyCssAndJavascript();
   }
 
   private function generateMkdocsFile() {

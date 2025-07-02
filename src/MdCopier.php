@@ -43,6 +43,21 @@ class MdCopier {
     }
   }
 
+  public function copyCssAndJavascript() {
+    $output = null;
+    $resultCode = null;
+
+    $from = __DIR__ . "/../assets/stylesheets";
+    $to = __DIR__ . "/../output/docs";
+
+    Logger::write("Copying $from to $to");
+    exec("cp -r $from $to", $output, $resultCode);
+
+    if ($resultCode !== 0) {
+      throw new \Exception("Copying stylesheets folder failed");
+    }
+  }
+
   public function copyIndex() {
     $output = null;
     $resultCode = null;
