@@ -44,6 +44,8 @@ class App {
     $mdCopier = new MdCopier();
     $mdCopier->copyIndex();
     $mdCopier->copyCssAndJavascript();
+    $mdCopier->copyImages();
+    $mdCopier->copyIndex();
   }
 
   private function generateMkdocsFile() {

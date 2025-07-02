@@ -47,14 +47,29 @@ class MdCopier {
     $output = null;
     $resultCode = null;
 
-    $from = __DIR__ . "/../assets/stylesheets";
+    $from = __DIR__ . "/../assets/css";
     $to = __DIR__ . "/../output/docs";
 
     Logger::write("Copying $from to $to");
     exec("cp -r $from $to", $output, $resultCode);
 
     if ($resultCode !== 0) {
-      throw new \Exception("Copying stylesheets folder failed");
+      throw new \Exception("Copying css folder failed");
+    }
+  }
+
+  public function copyImages() {
+    $output = null;
+    $resultCode = null;
+
+    $from = __DIR__ . "/../assets/img";
+    $to = __DIR__ . "/../output/docs";
+
+    Logger::write("Copying $from to $to");
+    exec("cp -r $from $to", $output, $resultCode);
+
+    if ($resultCode !== 0) {
+      throw new \Exception("Copying img folder failed");
     }
   }
 
