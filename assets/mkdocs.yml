@@ -2,16 +2,17 @@ site_name: CiviCRM Documentation
 
 theme:
   name: material
+  logo: img/civicrm-logo.svg
   features:
     - navigation.tabs
 
 extra_css:
-  - stylesheets/extra.css
+  - css/extra.css
 
 plugins:
   - search
   - tags
-  - categories
+#- categories
   - mkdocs-breadcrumbs-plugin:
       delimiter: " &gt; "  # separator between sections
       log_level: "WARNING"  # "DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"

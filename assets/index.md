@@ -1,38 +1,34 @@
-# Welcome to the CiviCRM Documentation
+# CiviCRM Documentation Overview
 
-## What do you want to do?
+This is the place to find official information on how to use CiviCRM.
 
-| Want to learn more about specific features of CiviCRM? Want to learn more about CiviCRM in general? |
-|-----------------------------------------------------------------------------------------------------|
-| 🚀 [Read the User Guide](user/index.md)                                                |
+New to CiviCRM? Watch our [CiviCRM in a nutshell](#) video.
 
-| Want to install or update CiviCRM? Want to configure mail or cron? |
-| ------------ |
-| 🛠️ [Read the Administrator Guide](admin/index.md) |
+## Our three main guides
 
-| Are you a developer?                        |
-|---------------------------------------------|
-| 👾 [Read the Developer Guide](dev/index.md) |
+Our three main guides reflect the roles one might have in an organization:
 
-## Browse by experience level or category
+* 🚀 [User](user/index.md) - learn how to organize your contacts, manage events, receive donations, send newsletters...
+* ️🛠️ [Administrator](admin/index.md) - learn how to install or upgrade CiviCRM, how to set up cron...
+* 👾 [Developer](dev/index.md) - learn how to add new functionality to CiviCRM, interact with CiviCRM using the API...
 
-You can browse the [documentation by experience level](tags.md) or by category:
+## Browse by content category
+
+To match your learning needs, you can browse the documentation by content category:
 
 * [Tutorials](categories/tutorials.md)
 * [How-to Guides](categories/how-to-guides.md)
 * [Explanation](categories/explanation.md)
 * [Reference](categories/reference.md)
 
-## Need More Help?
+## A question?
 
-Visit our forum on [StackExchange](https://civicrm.stackexchange.com)
+Ask questions and find answers on our [StackExchange](https://civicrm.stackexchange.com) forum.
 
-Chat with us on [Mattermost](https://chat.civicrm.org)
+You can also chat with the CiviCRM community members on [Mattermost](https://chat.civicrm.org).
 
-## Found an Error in the Documentation?
+## Feedback
 
-If you found an error in the documentation [let us know](#)! Or even better: [get involved](#)!
+If you found an error in the documentation [let us know](#).
 
-## Want to Contribute to the Documention?
-
-[Help us](about/get-involved.md) keeping the documentation up-to-date.
+[Get involved](about/get-involved.md)! Help us improve the documentation and keep it up-to-date.
