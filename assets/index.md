@@ -21,6 +21,14 @@ To match your learning needs, you can browse the documentation by content catego
 * [Explanation](categories/explanation.md)
 * [Reference](categories/reference.md)
 
+## Popular topics
+
+* [Goups and tags](user/organising-your-data/groups-and-tags)
+* [Membership renewals](user/membership/renewals/)
+* [Checksum tokens](user/common-workflows/tokens-and-mail-merge/#checksum)
+* [All hooks](dev/hooks/list)
+* [Upgrading CiviCRM for Drupal 8/9/10](admin/upgrade/drupal8/)
+
 ## A question?
 
 Ask questions and find answers on our [StackExchange](https://civicrm.stackexchange.com) forum.
