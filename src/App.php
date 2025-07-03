@@ -72,7 +72,7 @@ class App {
         'User Guide' => $userYml['nav'],
       ],
       [
-        'Administator Guide' => $adminYml['nav'],
+        'Administrator Guide' => $adminYml['nav'],
       ],
       [
         'Developer Guide' => $devYml['nav'],
