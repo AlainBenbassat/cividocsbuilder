@@ -87,4 +87,34 @@ class MdCopier {
       throw new \Exception("Copying index.md failed");
     }
   }
+
+  public function copyTags() {
+    $output = null;
+    $resultCode = null;
+
+    $from = __DIR__ . "/../assets/tags.md";
+    $to = __DIR__ . "/../output/docs";
+
+    Logger::write("Copying $from to $to");
+    exec("cp $from $to", $output, $resultCode);
+
+    if ($resultCode !== 0) {
+      throw new \Exception("Copying tags.md failed");
+    }
+  }
+
+  public function copyOverrides() {
+    $output = null;
+    $resultCode = null;
+
+    $from = __DIR__ . "/../assets/overrides";
+    $to = __DIR__ . "/../output";
+
+    Logger::write("Copying $from to $to");
+    exec("cp -r $from $to", $output, $resultCode);
+
+    if ($resultCode !== 0) {
+      throw new \Exception("Copying overrides failed");
+    }
+  }
 }

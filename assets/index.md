@@ -4,22 +4,20 @@ This is the place to find official information on how to use CiviCRM.
 
 New to CiviCRM? Watch our [CiviCRM in a nutshell](#) video.
 
-## Our three main guides
+## Our four main guides
 
-Our three main guides reflect the roles one might have in an organization:
+Our four main guides reflect the roles one might have in an organization:
 
 * 🚀 [User](user/index.md) - learn how to organize your contacts, manage events, receive donations, send newsletters...
-* ️🛠️ [Administrator](admin/index.md) - learn how to install or upgrade CiviCRM, how to set up cron...
+* ⚙️ [Sysadmin](installation/index.md) - learn how to install CiviCRM
+* ️🛠️ [Administrator](admin/index.md) - learn how to upgrade CiviCRM, how to set up cron...
 * 👾 [Developer](dev/index.md) - learn how to add new functionality to CiviCRM, interact with CiviCRM using the API...
 
 ## Browse by content category
 
 To match your learning needs, you can browse the documentation by content category:
 
-* [Tutorials](categories/tutorials.md)
-* [How-to Guides](categories/how-to-guides.md)
-* [Explanation](categories/explanation.md)
-* [Reference](categories/reference.md)
+[Tutorials](page-types/tutorial) | [How-to Guides](page-types/how-to-guide) | [Explanation](page-types/explanation) | [Reference](page-types/reference)
 
 ## Popular topics
 

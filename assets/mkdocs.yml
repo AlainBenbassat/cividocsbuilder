@@ -2,6 +2,7 @@ site_name: CiviCRM Documentation
 
 theme:
   name: material
+  custom_dir: overrides
   logo: img/civicrm-logo.svg
   features:
     - navigation.tabs
@@ -11,8 +12,16 @@ extra_css:
 
 plugins:
   - search
-  - tags
-#- categories
+  - categories:
+      generate_index: true
+      verbose: false
+      base_name: 'page-types'
+      section_title: 'Page type:'
+      no_nav: false
+      category_separator: '|'
+  - tags:
+      tags_file: tags.md
+      tags_template: overrides/tags.md.template
   - mkdocs-breadcrumbs-plugin:
       delimiter: " &gt; "  # separator between sections
       log_level: "WARNING"  # "DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"

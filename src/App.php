@@ -34,7 +34,7 @@ class App {
 
     $mdCopier->copyRepo('user-en', 'user');
     $mdCopier->copyRepo('sysadmin', 'admin');
-    $mdCopier->copyRepo('installation', 'admin');
+    $mdCopier->copyRepo('installation', 'installation');
     $mdCopier->copyRepo('dev', 'dev');
 
     $mdCopier->copyAbout();
@@ -46,6 +46,8 @@ class App {
     $mdCopier->copyCssAndJavascript();
     $mdCopier->copyImages();
     $mdCopier->copyIndex();
+    $mdCopier->copyOverrides();
+    $mdCopier->copyTags();
   }
 
   private function generateMkdocsFile() {
@@ -55,6 +57,9 @@ class App {
 
     $userYml = Yaml::parseFile(__DIR__ . "/../input/user-en/mkdocs.yml");
     $this->addTargetGuideName($userYml, 'user');
+
+    $installationYml = Yaml::parseFile(__DIR__ . "/../input/installation/mkdocs.yml");
+    $this->addTargetGuideName($installationYml, 'installation');
 
     $adminYml = Yaml::parseFile(__DIR__ . "/../input/sysadmin/mkdocs.yml");
     $this->addTargetGuideName($adminYml, 'admin');
@@ -70,6 +75,9 @@ class App {
       ],
       [
         'User Guide' => $userYml['nav'],
+      ],
+      [
+        'Installation Guide' => $installationYml['nav'],
       ],
       [
         'Administrator Guide' => $adminYml['nav'],
