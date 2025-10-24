@@ -17,7 +17,7 @@ Our four main guides reflect the roles one might have in an organization:
 
 To match your learning needs, you can browse the documentation by content category:
 
-[Tutorials](page-types/tutorial) | [How-to Guides](page-types/how-to-guide) | [Explanation](page-types/explanation) | [Reference](page-types/reference)
+[Tutorials](categories/tutorial) | [How-to Guides](categories/how-to) | [Explanation](categories/explanation) | [Reference](categories/reference)
 
 ## Popular topics
 

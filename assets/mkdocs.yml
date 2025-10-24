@@ -15,7 +15,7 @@ plugins:
   - categories:
       generate_index: true
       verbose: false
-      base_name: 'page-types'
+      base_name: 'categories'
       section_title: 'Page type:'
       no_nav: false
       category_separator: '|'

@@ -5,7 +5,8 @@ namespace BuildCividocs;
 use Symfony\Component\Yaml\Yaml;
 
 class App {
-  private const REPO_USER_MANUAL = 'https://lab.civicrm.org/documentation/docs/user-en.git';
+  //private const REPO_USER_MANUAL = 'https://lab.civicrm.org/documentation/docs/user-en.git';
+  private const REPO_USER_MANUAL = 'https://lab.civicrm.org/usha.makoa/user-en.git';
   private const REPO_SYSADMIN_MANUAL = 'https://lab.civicrm.org/documentation/docs/sysadmin.git';
   private const REPO_INSTALLATION_MANUAL = 'https://lab.civicrm.org/documentation/docs/installation.git';
   private const REPO_DEV_MANUAL = 'https://lab.civicrm.org/documentation/docs/dev.git';
