@@ -21,7 +21,6 @@ plugins:
       category_separator: '|'
   - tags:
       tags_file: tags.md
-      tags_template: overrides/tags.md.template
   - mkdocs-breadcrumbs-plugin:
       delimiter: " &gt; "  # separator between sections
       log_level: "WARNING"  # "DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"
