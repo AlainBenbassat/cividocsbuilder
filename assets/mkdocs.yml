@@ -2,7 +2,6 @@ site_name: CiviCRM Documentation
 
 theme:
   name: material
-  custom_dir: overrides
   logo: img/civicrm-logo.svg
   features:
     - navigation.tabs
