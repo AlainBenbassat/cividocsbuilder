@@ -47,7 +47,6 @@ class App {
     $mdCopier->copyCssAndJavascript();
     $mdCopier->copyImages();
     $mdCopier->copyIndex();
-    $mdCopier->copyOverrides();
     $mdCopier->copyTags();
   }
 
