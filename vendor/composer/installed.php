@@ -3,7 +3,7 @@
         'name' => 'businessandcode/cividocsbuilder',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '50ada34840e78032fbfe50932a760d027fc09943',
+        'reference' => '6ba015c7b58494352ee3391e3654b68a5bb1a192',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'businessandcode/cividocsbuilder' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '50ada34840e78032fbfe50932a760d027fc09943',
+            'reference' => '6ba015c7b58494352ee3391e3654b68a5bb1a192',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

@@ -1,0 +1,41 @@
+site_name: About the Documentation
+site_url: https://docs.civicrm.org/about/
+repo_url: https://lab.civicrm.org/documentation/docs/about/
+edit_uri: https://lab.civicrm.org/documentation/docs/about/-/edit/master/docs/
+site_description: About the Documentation
+site_author: The CiviCRM community
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/gitlab
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - def_list
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      guess_lang: true
+      extend_pygments_lang:
+        - name: php
+          lang: php
+          options:
+            startinline: true
+  - pymdownx.superfences:
+      css_class: codehilite
+  - pymdownx.inlinehilite:
+      css_class: codehilite
+  - pymdownx.tilde
+  - pymdownx.betterem
+  - pymdownx.mark
+  - pymdownx.details
+
+plugins:
+  - search:
+      lang: en
+
+nav:
+  - Introduction: index.md
+  - Get Involved: get-involved.md
+  - Style Guide: style.md

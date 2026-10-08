@@ -1,10 +1,19 @@
 <?php
+declare(strict_types=1);
 
 namespace BuildCividocs;
 
 class MdCopier {
+  public function __construct(bool $removeExistingFiles = FALSE) {
+    if ($removeExistingFiles) {
+      $this->initTargetDir();
+    }
+  }
+
   public function initTargetDir() {
     $to = __DIR__ . "/../output";
+
+    // remove existing files
     shell_exec("rm -rf $to/docs");
     shell_exec("rm -rf $to/mkdocs.yml");
   }
@@ -25,21 +34,6 @@ class MdCopier {
 
     if ($resultCode !== 0) {
       throw new \Exception("Copying $source to $destination failed");
-    }
-  }
-
-  public function copyAbout() {
-    $output = null;
-    $resultCode = null;
-
-    $from = __DIR__ . "/../assets/about";
-    $to = __DIR__ . "/../output/docs";
-
-    Logger::write("Copying $from to $to");
-    exec("cp -r $from $to", $output, $resultCode);
-
-    if ($resultCode !== 0) {
-      throw new \Exception("Copying About folder failed");
     }
   }
 
@@ -70,21 +64,6 @@ class MdCopier {
 
     if ($resultCode !== 0) {
       throw new \Exception("Copying img folder failed");
-    }
-  }
-
-  public function copyIndex() {
-    $output = null;
-    $resultCode = null;
-
-    $from = __DIR__ . "/../assets/index.md";
-    $to = __DIR__ . "/../output/docs";
-
-    Logger::write("Copying $from to $to");
-    exec("cp $from $to", $output, $resultCode);
-
-    if ($resultCode !== 0) {
-      throw new \Exception("Copying index.md failed");
     }
   }
 

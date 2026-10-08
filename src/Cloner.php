@@ -29,6 +29,11 @@ class Cloner {
     }
   }
 
+  public function copyLocalRepo(string $dirName): void {
+    chdir(__DIR__ . '/../assets/local_repos');
+    exec("cp -r $dirName ../../input");
+  }
+
   private function extractInstallationDir(string $source): string {
     return str_replace('.git', '', substr($source, strrpos($source, '/') + 1));
   }

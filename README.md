@@ -21,12 +21,44 @@ Go into that new directory and execute buildcividocs.php:
 
 ```
 cd cividocsbuilder
-php buildcividocs.php
+```
+
+You might want to create a Python virtual environment:
+
+```
+python -m venv venv
+```
+
+Activate the virtual environment:
+
+```
+source venv/bin/activate
+```
+
+Make sure the Material theme is installed and the plugins:
+
+```
+python -m pip install mkdocs-material
+pip install mkdocs-breadcrumbs-plugin
+pip install pip install mkdocs-categories-plugin
+```
+
+Then build the documentation site:
+
+```
+./buildcividocs.php
 ```
 
 This will generate the CiviCRM documentation site into the directory cividocsbuilder/output/site.
 
 Configure Apache or Nginx to take this directory as the root of the documentation site.
+
+Or on your local machine:
+
+```
+cd output
+mkdocs serve
+```
 
 ## Periodic Updates
 
@@ -37,3 +69,9 @@ You can configure cron to execute the build script e.g. every hour:
 ```
 0 * * * * /usr/bin/php /var/www/vhosts/cividocsbuilder/buildcividocs.php
 ```
+
+## Future Technology?
+
+Use Zeniscal instead of MKDocs now that the latter is not updated anymore?
+
+See https://squidfunk.github.io/mkdocs-material/blog/2025/11/05/zensical/

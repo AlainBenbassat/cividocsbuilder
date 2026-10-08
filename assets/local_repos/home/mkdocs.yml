@@ -11,6 +11,19 @@ extra_css:
 
 plugins:
   - search
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: fr
+          name: Français
+          build: true
+        - locale: es
+          name: Español
+          build: true
   - categories:
       generate_index: true
       verbose: false
@@ -31,6 +44,9 @@ plugins:
       generate_home_index: false
       use_page_titles: true # use page title instead of path in breadcrumbs
       home_text: "Home"
+
+nav:
+  - Home: 'index.md'
 
 # Don't make any changes below this line. nav will be generated here.
 
