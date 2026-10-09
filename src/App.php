@@ -12,7 +12,7 @@ class App {
   private const REPO_DEV_MANUAL = 'https://lab.civicrm.org/documentation/docs/dev.git';
 
   public function run(): void {
-    $this->cloneReposIntoInputDir();
+    //$this->cloneReposIntoInputDir();
     $this->copyInputFilesToOutputDir();
 
     $this->generateMkdocsYmlFileIntoOutputDir();
