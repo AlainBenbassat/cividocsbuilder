@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Material Landing Page</title>
+
+  <!-- Roboto Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Custom Primary Palette derived from #086287 (Deep Teal / Ocean Blue) */
+      --md-primary-color: #086287;
+      --md-primary-color--dark: #054865;
+      --md-primary-color--light: #e8f4f8;
+      --md-accent-color: #0d82b3;
+      --md-text-color: #2b363b;
+      --md-text-muted: #5a6a72;
+      --md-bg-color: #f4f7f9;
+      --md-card-bg: #ffffff;
+      --md-border-color: #dce4e8;
+      --md-shadow: 0 4px 6px -1px rgba(8, 98, 135, 0.08), 0 2px 4px -1px rgba(8, 98, 135, 0.04);
+      --md-shadow-hover: 0 10px 20px -3px rgba(8, 98, 135, 0.15), 0 4px 6px -2px rgba(8, 98, 135, 0.08);
+      --font-stack: "Roboto", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-stack);
+      color: var(--md-text-color);
+      background-color: var(--md-bg-color);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Accent Header Bar (MkDocs Style) */
+    .md-header-bar {
+      height: 4px;
+      background-color: var(--md-primary-color);
+      width: 100%;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.75rem;
+      font-weight: 700;
+      color: var(--md-primary-color);
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--md-text-muted);
+      font-weight: 400;
+      line-height: 1.7;
+    }
+
+    /* Responsive Grid for Topic Cards */
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    /* Topic Card Block */
+    .topic-card {
+      background: var(--md-card-bg);
+      border: 1px solid var(--md-border-color);
+      border-radius: 8px;
+      padding: 1.75rem;
+      box-shadow: var(--md-shadow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topic-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--md-shadow-hover);
+      border-color: rgba(8, 98, 135, 0.35);
+    }
+
+    .topic-card h2 {
+      font-size: 1.35rem;
+      font-weight: 500;
+      color: var(--md-text-color);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid var(--md-primary-color--light);
+      padding-bottom: 0.5rem;
+    }
+
+    /* MkDocs Material Style Bullet Marker */
+    .topic-card h2::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 1.25rem;
+      background-color: var(--md-primary-color);
+      border-radius: 3px;
+      margin-right: 0.75rem;
+    }
+
+    .topic-card p {
+      font-size: 0.95rem;
+      color: var(--md-text-muted);
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .topic-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Unordered Lists Styling (MkDocs Material Inspired) */
+    .topic-card ul {
+      list-style: none;
+      margin: 0.75rem 0 1rem 0;
+      padding-left: 0;
+    }
+
+    .topic-card ul:last-child {
+      margin-bottom: 0;
+    }
+
+    .topic-card li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      color: var(--md-text-muted);
+      line-height: 1.5;
+    }
+
+    .topic-card li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Custom Styled Bullet Marker using Primary Color */
+    .topic-card li::before {
+      content: "";
+      position: absolute;
+      left: 0.35rem;
+      top: 0.55rem;
+      width: 6px;
+      height: 6px;
+      background-color: var(--md-primary-color);
+      border-radius: 50%;
+    }
+
+    /* Nested Lists */
+    .topic-card ul ul {
+      margin: 0.4rem 0 0.4rem 0;
+    }
+
+    .topic-card ul ul li::before {
+      background-color: transparent;
+      border: 1px solid var(--md-primary-color);
+    }
+
+    /* Mobile Fine-Tuning */
+    @media (max-width: 600px) {
+      .container {
+        padding: 2rem 1rem 3rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .topics-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top Material Accent Line -->
+<div class="md-header-bar"></div>
+
+<main class="container">
+
+  <!-- Hero / Intro Section -->
+  <section class="hero">
+    <h1>Improving the CiviCRM Documentation</h1>
+    <p>
+      We have been looking at how to improve <a href="https://docs.civicrm.org/">the current CiviCRM documentation</a> during the sprints in Montara (2025), Lunteren (2025), and Paris (2026).
+    </p>
+  </section>
+
+  <!-- Topics Container Grid -->
+  <div class="topics-grid">
+
+    <!-- ==================== TOPIC BLOCK START ==================== -->
+    <article class="topic-card">
+      <h2>Weakness of The Current Documention</h2>
+      <p>
+        The current documentation can be found at <a href="https://docs.civicrm.org/">https://docs.civicrm.org/</a>.
+      </p>
+      <p>
+        The main weakness is that it's not user-centered:</p>
+      <ul>
+        <li>The main horizontal navigation is about creating documentation, adding a new book, and the documentation source on gitlab. It does not help users find what they are looking for.</li>
+        <li>The first handbook is about the community policies and conventions. Not what a regular user is looking for.</li>
+        <li>There is no global search. You have to open a guide in order to be able to search in that guide.</li>
+      </ul>
+    </article>
+    <!-- ===================== TOPIC BLOCK END ===================== -->
+
+    <!-- ==================== TOPIC BLOCK START ==================== -->
+    <article class="topic-card">
+      <h2>Alternative 1: Improved Navigation</h2>
+      <p>
+        Alternative 1 takes the existing documentation but presents it differently.
+      </p>
+      <ul>
+        <li>The main horizontal navigation points to the current guides: installation guide, user guide, sysadmin guide, and the developer guide.</li>
+        <li>There is a global search box.</li>
+        <li>There is a welcoming home page inviting the visitor to either browse by type of user, or by content category, or by popularity, or just search.</li>
+        <li>The existing French, Spanish, and Catalan user guides have been integrated by making the site multilingual. A language switch was added to the site header.</li>
+        <li>It hints at the <a href="https://diataxis.fr/">Diátaxis</a> framework for documentation. (not implemented because it is out-of-scope of this alternative)</li>
+      </ul>
+    </article>
+    <!-- ===================== TOPIC BLOCK END ===================== -->
+
+    <!-- ==================== TOPIC BLOCK START ==================== -->
+    <article class="topic-card">
+      <h2>Alternative 2: Merged Guides + AI</h2>
+      <p>
+        Why have a separate user guide, installation guide, and sysadmin guide? Let's merge them into a single guide!
+      </p>
+      <p>
+        And why not use AI to apply the Diátaxis framework, make the instructions clearer, have automatic translations...
+      </p>
+    </article>
+    <!-- ===================== TOPIC BLOCK END ===================== -->
+
+    <!--
+      TO ADD A NEW TOPIC:
+      Copy one of the <article class="topic-card">...</article> blocks above
+      and paste it right here before </div>.
+    -->
+
+  </div>
+</main>
+
+</body>
+</html>
