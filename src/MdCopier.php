@@ -87,7 +87,7 @@ class MdCopier {
     $resultCode = null;
 
     $from = __DIR__ . "/../assets/home.html";
-    $to = __DIR__ . "/../output/docs/index.html";
+    $to = __DIR__ . "/../output/index.html";
 
     Logger::write("Copying $from to $to");
     exec("cp $from $to", $output, $resultCode);

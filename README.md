@@ -38,9 +38,11 @@ source venv/bin/activate
 Make sure the Material theme is installed and the plugins:
 
 ```
-python -m pip install mkdocs-material
+pip install mkdocs
+pip install mkdocs-material
 pip install mkdocs-breadcrumbs-plugin
-pip install pip install mkdocs-categories-plugin
+pip install mkdocs-categories-plugin
+pip install mkdocs-static-i18n
 ```
 
 Then build the documentation site:

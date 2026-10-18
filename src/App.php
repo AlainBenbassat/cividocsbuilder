@@ -86,7 +86,7 @@ class App {
       'About' => $aboutYml['nav'],
     ];
 
-    file_put_contents(__DIR__ . '/../output/mkdocs.yml', Yaml::dump($targetYml));
+    file_put_contents(__DIR__ . '/../output/mkdocs.yml', Yaml::dump($targetYml, PHP_INT_MAX, 2));
   }
 
   private function buildStaticSite(): void {
