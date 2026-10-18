@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Material Landing Page</title>
+  <title>Beta CiviCRM Docs</title>
 
   <!-- Roboto Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -182,6 +182,45 @@
       border: 1px solid var(--md-primary-color);
     }
 
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 28px;
+      color: white;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      background-color: var(--md-primary-color);
+      background-image: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.18),
+        rgba(255, 255, 255, 0) 60%
+      );
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      filter: brightness(1.08);
+    }
+
+    .button:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .button:focus-visible {
+      outline: 3px solid var(--md-primary-color);
+      outline-offset: 3px;
+    }
+
     /* Mobile Fine-Tuning */
     @media (max-width: 600px) {
       .container {
@@ -215,6 +254,9 @@
     <p>
       We have been looking at how to improve <a href="https://docs.civicrm.org/">the current CiviCRM documentation</a> during the sprints in Montara (2025), Lunteren (2025), and Paris (2026).
     </p>
+    <p>
+      We present our unfinished work here.
+    </p>
   </section>
 
   <!-- Topics Container Grid -->
@@ -224,13 +266,10 @@
     <article class="topic-card">
       <h2>Weakness of The Current Documention</h2>
       <p>
-        The current documentation can be found at <a href="https://docs.civicrm.org/">https://docs.civicrm.org/</a>.
-      </p>
-      <p>
-        The main weakness is that it's not user-centered:</p>
+        The main weaknesses of the <a href="https://docs.civicrm.org/">current documentation</a> is that it is not user-centered:</p>
       <ul>
-        <li>The main horizontal navigation is about creating documentation, adding a new book, and the documentation source on gitlab. It does not help users find what they are looking for.</li>
-        <li>The first handbook is about the community policies and conventions. Not what a regular user is looking for.</li>
+        <li>The main horizontal navigation is about creating documentation, adding a new book, and the documentation source on gitlab. This is not relevant for the primary users of a documentation website.</li>
+        <li>The first handbook that you see is about the community policies and conventions. Again, not what a regular user is looking for.</li>
         <li>There is no global search. You have to open a guide in order to be able to search in that guide.</li>
       </ul>
     </article>
@@ -246,9 +285,12 @@
         <li>The main horizontal navigation points to the current guides: installation guide, user guide, sysadmin guide, and the developer guide.</li>
         <li>There is a global search box.</li>
         <li>There is a welcoming home page inviting the visitor to either browse by type of user, or by content category, or by popularity, or just search.</li>
-        <li>The existing French, Spanish, and Catalan user guides have been integrated by making the site multilingual. A language switch was added to the site header.</li>
-        <li>It hints at the <a href="https://diataxis.fr/">Diátaxis</a> framework for documentation. (not implemented because it is out-of-scope of this alternative)</li>
+        <li>The site is multilingual, with a language switch in the site header. This allows us to better integrate existing French, Spanish, and Catalan user guides. (The site can be fully translated later. This is out-of-scope for this alternative)</li>
+        <li>It hints at the <a href="https://diataxis.fr/">Diátaxis</a> framework for documentation. (not implemented because it is out-of-scope for this alternative)</li>
       </ul>
+      <p style="text-align: center;">
+        <a class="button" href="https://beta.docs.civicrm.org/site/">Try it out!</a>
+      </p>
     </article>
     <!-- ===================== TOPIC BLOCK END ===================== -->
 
@@ -259,7 +301,13 @@
         Why have a separate user guide, installation guide, and sysadmin guide? Let's merge them into a single guide!
       </p>
       <p>
-        And why not use AI to apply the Diátaxis framework, make the instructions clearer, have automatic translations...
+        And why not use AI to apply the Diátaxis framework and make the instructions clearer.
+      </p>
+      <p style="text-align: center;">
+        <a class="button" href="https://ushamakoa.github.io/cividoc-pipeline/">Try it out!</a>
+      </p>
+      <p>
+        (Translations are out-of-scope for this initiative)
       </p>
     </article>
     <!-- ===================== TOPIC BLOCK END ===================== -->

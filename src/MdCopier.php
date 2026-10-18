@@ -81,4 +81,19 @@ class MdCopier {
       throw new \Exception("Copying tags.md failed");
     }
   }
+
+  public function copyBetaDocsHomePage() {
+    $output = null;
+    $resultCode = null;
+
+    $from = __DIR__ . "/../assets/home.html";
+    $to = __DIR__ . "/../output/docs/index.html";
+
+    Logger::write("Copying $from to $to");
+    exec("cp $from $to", $output, $resultCode);
+
+    if ($resultCode !== 0) {
+      throw new \Exception("Copying home.html failed");
+    }
+  }
 }
